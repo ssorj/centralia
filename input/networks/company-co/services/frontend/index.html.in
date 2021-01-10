@@ -1,0 +1,10 @@
+---
+title: Service <b>frontend</b>
+---
+
+<div id="-view-top">
+  <h1>Service <b>frontend</b></h1>
+  <nav>
+    <a href="" class="small-button">Delete</a>
+  </nav>
+</div>

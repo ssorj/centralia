@@ -1,0 +1,12 @@
+---
+title: Networks
+---
+
+<div id="-view-top">
+  <h1>Networks</h1>
+  <nav>
+    <a href="" class="small-button">Create network</a>
+  </nav>
+</div>
+
+{{network_table}}

@@ -1,0 +1,22 @@
+---
+title: Network <b>company-co</b>
+---
+
+<div id="-view-top">
+  <h1>Network <b>company-co</b></h1>
+  <nav>
+    <a href="" class="small-button">Create token</a>
+  </nav>
+</div>
+
+<h2>Properties</h2>
+
+{{network_properties}}
+
+<h2>Linked sites</h2>
+
+{{site_table}}
+
+<h2>Exposed services</h2>
+
+{{service_table}}

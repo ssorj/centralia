@@ -1,0 +1,14 @@
+---
+title: Site <b>na-east</b>
+---
+
+<div id="-view-top">
+  <h1>Site <b>na-east</b></h1>
+  <nav>
+    <a href="" class="small-button">Unlink</a>
+  </nav>
+</div>
+
+<h2>Properties</h2>
+
+{{site_properties}}
