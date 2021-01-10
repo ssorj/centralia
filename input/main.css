@@ -405,6 +405,7 @@ section > div {
     justify-content: space-between;
     align-items: center;
     height: 3em;
+    margin-top: -0.4em;
 }
 
 .title-bar > * {
