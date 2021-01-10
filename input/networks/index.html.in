@@ -2,7 +2,7 @@
 title: Networks
 ---
 
-<div id="-view-top">
+<div class="title-bar">
   <h1>Networks</h1>
   <nav>
     <a href="" class="small-button">Create network</a>

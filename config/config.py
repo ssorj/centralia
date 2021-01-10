@@ -44,12 +44,7 @@ props = (
 site_properties = html_table(props, class_="properties")
 
 def path_nav(page):
-    links = list(page.path_nav_links)
-
-    if len(links) < 2:
-        return ""
-
     separator = "<span class=\"path-separator\">›</span>"
-    links = separator.join(links[1:])
+    links = separator.join(list(page.path_nav_links)[1:])
 
-    return f"<nav id=\"-path-nav\">{links}</nav>"
+    return f"<nav class=\"path-nav\">{links}</nav>"
