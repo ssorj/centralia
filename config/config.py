@@ -33,6 +33,30 @@ network_properties = html_table(props, class_="properties")
 
 def cell(column_index, value):
     if column_index == 0:
+        value = f"<a href=\"/networks/company-co/tokens/company-co-497c/index.html\">{value}</a>"
+
+    return f"<td>{value}</td>"
+
+headings = "Name", "Status", "Created"
+
+data = (
+    ("company-co-497c", "OK", "3 minutes ago"),
+    ("company-co-af89", "OK", "2 days ago"),
+    ("company-co-f8fa", "Revoked", "2 days ago"),
+)
+
+token_table = html_table(data, headings=headings, cell_fn=cell)
+
+props = (
+    ("Name", "company-co-497c"),
+    ("Status", "OK"),
+    ("Created", "3 minutes ago"),
+)
+
+token_properties = html_table(props, class_="properties")
+
+def cell(column_index, value):
+    if column_index == 0:
         value = f"<a href=\"/networks/company-co/links/na-east-d45e/index.html\">{value}</a>"
 
     return f"<td>{value}</td>"
@@ -54,15 +78,15 @@ def cell(column_index, value):
 
     return f"<td>{value}</td>"
 
-headings = "Name", "Bindings"
+headings = "Name", "Status", "Bindings", "Created"
 
 data = (
-    ("frontend", 2),
-    ("inventory", 1),
-    ("orders", 1),
-    ("postgres", 1),
-    ("reviews", 1),
-    ("strimzi", 1),
+    ("frontend", "OK", 2, "3 minutes ago"),
+    ("inventory", "OK", 1, "4 hours ago"),
+    ("orders", "OK", 1, "2 days ago"),
+    ("postgres", "OK", 1, "3/15/2020"),
+    ("reviews", "OK", 1, "3/15/2020"),
+    ("strimzi", "Error", 1, "1/01/2021"),
 )
 
 service_table = html_table(data, headings=headings, cell_fn=cell)

@@ -5,19 +5,48 @@ title: Network <span class="name">company-co</span>
 <div class="title-bar">
   <h1>{{page.title}}</h1>
   <nav>
-    <a href="" class="small-button">Create token</a>
+    <a href="" class="small-button">Go to console</a>
     <a href="" class="small-button">Delete</a>
   </nav>
 </div>
 
-<h2>Properties</h2>
+<h2>Linking sites to this network</h2>
+
+{{lipsum()}}
+
+<nav>
+  <a href="" class="small-button">Download a single-use token</a>
+</nav>
+
+<div class="section-bar">
+  <h2>Properties</h2>
+  <nav>
+    <a href="" class="small-button">Edit properties</a>
+  </nav>
+</div>
 
 {{network_properties}}
 
-<h2>Links</h2>
+<div class="section-bar">
+  <h2>Tokens</h2>
+  <nav>
+    <a href="" class="small-button">Create token</a>
+  </nav>
+</div>
+
+{{token_table}}
+
+<div class="section-bar">
+  <h2>Links</h2>
+</div>
 
 {{link_table}}
 
-<h2>Services</h2>
+<div class="section-bar">
+  <h2>Services</h2>
+  <nav>
+    <a href="" class="small-button">Create service</a>
+  </nav>
+</div>
 
 {{service_table}}

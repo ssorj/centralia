@@ -426,6 +426,26 @@ section > div {
 
 /* --- */
 
+.section-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+    margin-top: 1.6em;
+    border-top: 1px solid #999;
+    padding-top: 1em;
+}
+
+.section-bar > * {
+    margin: 0;
+}
+
+.section-bar > nav > a {
+    margin-left: 1em;
+}
+
+/* --- */
+
 #-excursion {
     background-color: #333;
 }
