@@ -46,7 +46,7 @@ title: Network <span class="name">company-co</span>
         <p>{{lipsum(15)}}</p>
 
         <pre><code>$ skupper init
-$ skupper link create &lt;token-file&gt;</code></pre>
+$ skupper link create <i>&lt;token-file&gt;</i></code></pre>
       </li>
     </ol>
 
