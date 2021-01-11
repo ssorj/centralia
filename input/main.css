@@ -551,6 +551,7 @@ span.material-icons-outlined {
     display: inline-block;
     text-align: center;
     padding: 0.4em 2em;
+    margin-right: -4px;
     font-weight: 300;
     color: black;
     letter-spacing: 0.3px;

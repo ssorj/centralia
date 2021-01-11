@@ -1,5 +1,6 @@
 ---
 title: Networks
+body_template: config/browser-body.html
 ---
 
 <div class="title-bar">
@@ -10,5 +11,3 @@ title: Networks
 </div>
 
 {{network_table}}
-
-<p><a style="color: #ccc; font-size: 0.9em; font-style: italic;" href="/networks-alternate/index.html">Alternate</a></p>
