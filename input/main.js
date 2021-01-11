@@ -39,3 +39,32 @@ window.addEventListener("load", () => {
         $("#-path-nav").style.display = "none";
     }
 });
+
+for (let tabs of $$(".tabs")) {
+    for (let link of tabs.$$(":scope > nav > a")) {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            let selectedId = new URL(link.href).hash.substr(1)
+
+            for (let ilink of tabs.$$(":scope > nav > a")) {
+                if (ilink.href == link.href) {
+                    ilink.classList.add("selected");
+                } else {
+                    ilink.classList.remove("selected");
+                }
+            }
+
+            for (let pane of tabs.$$(":scope > div")) {
+                if (pane.id == selectedId) {
+                    pane.style.display = "inherit";
+                } else {
+                    pane.style.display = "none";
+                }
+            }
+        });
+    }
+
+    tabs.$(":scope > nav > a").classList.add("selected");
+    tabs.$(":scope > div").style.display = "inherit";
+}

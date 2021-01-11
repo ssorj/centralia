@@ -243,6 +243,7 @@ h1 {
 h2 {
     font-size: 1.1em;
     font-weight: 600;
+    margin-top: 1.4em;
 }
 
 div.item {
@@ -278,7 +279,6 @@ a.item-operation {
 
 code {
     color: #0009;
-    padding: 0 0.15em;
 }
 
 a.big-button {
@@ -405,7 +405,7 @@ section > div {
     justify-content: space-between;
     align-items: center;
     height: 3em;
-    margin-top: -0.4em;
+    margin: -0.4em 0 1em 0;
 }
 
 .title-bar > * {
@@ -426,6 +426,12 @@ section > div {
 
 /* --- */
 
+.section-bar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .section-bar {
     display: flex;
     justify-content: space-between;
@@ -436,10 +442,12 @@ section > div {
     padding-top: 1em;
 }
 
+.section-bar-top > *,
 .section-bar > * {
     margin: 0;
 }
 
+.section-bar-top > nav > a,
 .section-bar > nav > a {
     margin-left: 1em;
 }
@@ -512,7 +520,8 @@ b {
 /* --- */
 
 .path-nav > a {
-    color: #777;
+    font-weight: 300;
+    color: black;
 }
 
 .path-separator {
@@ -525,3 +534,43 @@ b {
 }
 
 /* --- */
+
+span.material-icons-outlined {
+    vertical-align: -0.2em;
+    margin-right: 0.1em;
+}
+
+/* --- */
+
+.tabs > nav {
+    border-bottom: 1px solid #999;
+    margin-bottom: 1.6em;
+}
+
+.tabs > nav > a {
+    display: inline-block;
+    text-align: center;
+    padding: 0.4em 2em;
+    font-weight: 300;
+    color: black;
+    letter-spacing: 0.3px;
+}
+
+.tabs > nav > a:hover,
+.tabs > nav > a.selected {
+    border-bottom: 2px solid #999;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.tabs > div {
+    display: none;
+}
+
+/* --- */
+
+table.properties td:nth-child(1) {
+    font-weight: 300;
+    min-width: 8em;
+    padding-right: 2em;
+}

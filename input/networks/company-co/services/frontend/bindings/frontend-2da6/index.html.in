@@ -1,5 +1,5 @@
 ---
-title: Service <span class="name">frontend</span>
+title: Binding <span class="name">frontend-2da6</span>
 ---
 
 <div class="title-bar">
@@ -11,8 +11,4 @@ title: Service <span class="name">frontend</span>
 
 <h2>Properties</h2>
 
-{{service_properties}}
-
-<h2>Bindings</h2>
-
-{{binding_table}}
+XXX

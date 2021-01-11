@@ -37,12 +37,12 @@ def cell(column_index, value):
 
     return f"<td>{value}</td>"
 
-headings = "Name", "Status", "Created"
+headings = "Name", "Status", "Expires", "Created"
 
 data = (
-    ("company-co-497c", "OK", "3 minutes ago"),
-    ("company-co-af89", "OK", "2 days ago"),
-    ("company-co-f8fa", "Revoked", "2 days ago"),
+    ("company-co-497c", "OK", "Never", "3 minutes ago"),
+    ("company-co-af89", "OK", "In 6 hours", "2 days ago"),
+    ("company-co-f8fa", "Revoked", "-", "2 days ago"),
 )
 
 token_table = html_table(data, headings=headings, cell_fn=cell)
@@ -50,6 +50,7 @@ token_table = html_table(data, headings=headings, cell_fn=cell)
 props = (
     ("Name", "company-co-497c"),
     ("Status", "OK"),
+    ("Expires", "Never"),
     ("Created", "3 minutes ago"),
 )
 
@@ -72,6 +73,15 @@ data = (
 
 link_table = html_table(data, headings=headings, cell_fn=cell)
 
+props = (
+    ("Name", "na-east-d45e"),
+    ("Status", "OK"),
+    ("Site", "na-east (OpenShift)"),
+    ("Created", "3 minutes ago",),
+)
+
+link_properties = html_table(props, class_="properties")
+
 def cell(column_index, value):
     if column_index == 0:
         value = f"<a href=\"/networks/company-co/services/frontend/index.html\">{value}</a>"
@@ -85,17 +95,30 @@ data = (
     ("inventory", "OK", 1, "4 hours ago"),
     ("orders", "OK", 1, "2 days ago"),
     ("postgres", "OK", 1, "3/15/2020"),
-    ("reviews", "OK", 1, "3/15/2020"),
-    ("strimzi", "Error", 1, "1/01/2021"),
+    ("reviews", "Error", 1, "3/15/2020"),
 )
 
 service_table = html_table(data, headings=headings, cell_fn=cell)
 
 props = (
-    ("Name", "na-east-d45e"),
+    ("Name", "frontend"),
     ("Status", "OK"),
-    ("Site", "na-east (OpenShift)"),
     ("Created", "3 minutes ago",),
 )
 
-link_properties = html_table(props, class_="properties")
+service_properties = html_table(props, class_="properties")
+
+def cell(column_index, value):
+    if column_index == 0:
+        value = f"<a href=\"/networks/company-co/services/frontend/bindings/frontend-2da6/index.html\">{value}</a>"
+
+    return f"<td>{value}</td>"
+
+headings = "Name", "Status", "Target", "Site", "Created"
+
+data = (
+    ("frontend-2da6", "OK", "deployment/frontend", "na-east (OpenShift)", "2 days ago"),
+    ("frontend-45cc", "Error", "container/frontend", "na-west (Podman)", "1 day ago"),
+)
+
+binding_table = html_table(data, headings=headings, cell_fn=cell)
