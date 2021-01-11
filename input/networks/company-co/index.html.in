@@ -21,16 +21,34 @@ title: Network <span class="name">company-co</span>
   <div id="overview">
     <h2>Linking sites to this network</h2>
 
-    {{lipsum(10)}}
+    <ol>
+      <li>
+        <p>{{lipsum(20)}}</p>
 
-    <nav>
-      <a href="" class="small-button">Download a single-use token</a>
-    </nav>
+        <nav>
+          <a href="" class="small-button">Download the Skupper command-line tool</a>
+        </nav>
 
-    {{lipsum(15)}}
+        <p></p>
+      </li>
 
-    <pre><code>$ skupper init
+      <li>
+        <p>{{lipsum(10)}}</p>
+
+        <nav>
+          <a href="" class="small-button">Download a single-use token</a>
+        </nav>
+
+        <p></p>
+      </li>
+
+      <li>
+        <p>{{lipsum(15)}}</p>
+
+        <pre><code>$ skupper init
 $ skupper link create &lt;token-file&gt;</code></pre>
+      </li>
+    </ol>
 
     <h2>Exposing services on this network</h2>
 
