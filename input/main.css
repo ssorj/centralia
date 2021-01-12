@@ -575,3 +575,9 @@ table.properties td:nth-child(1) {
     min-width: 8em;
     padding-right: 2em;
 }
+
+/* --- */
+
+pre i {
+    color: #c67;
+}

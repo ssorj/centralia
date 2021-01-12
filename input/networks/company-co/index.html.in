@@ -54,7 +54,7 @@ $ skupper link create <i>&lt;link-token-file&gt;</i></code></pre>
 
     {{lipsum(15)}}
 
-    <pre><code>$ skupper expose deployment/&lt;deployment-name&gt;</code></pre>
+    <pre><code>$ skupper expose deployment/<i>&lt;deployment-name&gt;</i></code></pre>
 
     <h2>Connecting to services on this network</h2>
 
