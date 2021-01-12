@@ -404,8 +404,9 @@ section > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3em;
     margin: -0.4em 0 1em 0;
+    border-bottom: 1px solid #999;
+    padding-bottom: 1.6em;
 }
 
 .title-bar > * {
@@ -422,6 +423,11 @@ section > div {
 
 .title-bar > nav > a {
     margin-left: 1em;
+}
+
+.title-bar-tabs {
+    border-bottom: inherit;
+    padding-bottom: 0;
 }
 
 /* --- */
@@ -580,4 +586,17 @@ table.properties td:nth-child(1) {
 
 pre i {
     color: #c67;
+}
+
+/* --- */
+
+a.table-button {
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 0.2em;
+    padding: 0.05em 0.6em;
+    text-align: center;
+    color: black;
+    font-weight: 400;
+    font-size: 0.85em;
 }

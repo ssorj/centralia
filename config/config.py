@@ -40,8 +40,8 @@ def cell(column_index, value):
 headings = "Name", "Status", "Expires", "Created"
 
 data = (
-    ("company-co-497c", "OK", "Never", "3 minutes ago"),
-    ("company-co-af89", "OK", "In 6 hours", "2 days ago"),
+    ("company-co-497c", "Active", "Never", "3 minutes ago"),
+    ("company-co-af89", "Active", "In 6 hours", "2 days ago"),
     ("company-co-f8fa", "Revoked", "-", "2 days ago"),
 )
 
@@ -58,29 +58,38 @@ token_properties = html_table(props, class_="properties")
 
 def cell(column_index, value):
     if column_index == 0:
-        value = f"<a href=\"/networks/company-co/links/na-east-d45e/index.html\">{value}</a>"
+        value = f"<a href=\"/networks/company-co/sites/na-east/index.html\">{value}</a>"
 
     return f"<td>{value}</td>"
 
-headings = "Name", "Status", "Site", "Cost", "Created"
+headings = "Name", "Status", "Site type", "Cost", "Linked"
 
 data = (
-    ("na-east-d45e", "OK", "na-east (OpenShift)", 1, "3 minutes ago"),
-    ("na-east-7c7b", "OK", "na-east (OpenShift)", 2, "2 days ago"),
-    ("na-west-4f84", "OK", "na-west (Podman)", 1, "1/8/2020"),
-    ("headquarters-a96a", "Error", "headquarters (OpenShift)", 1, "3/15/2020"),
+    ("na-east", "OK", "OpenShift", 2, "2 days ago"),
+    ("na-west", "OK", "Podman", 1, "1/8/2020"),
+    ("headquarters", "Error: Unreachable", "OpenShift", 1, "3/15/2020"),
 )
 
-link_table = html_table(data, headings=headings, cell_fn=cell)
+site_table = html_table(data, headings=headings, cell_fn=cell)
 
 props = (
-    ("Name", "na-east-d45e"),
+    ("Name", "na-east"),
     ("Status", "OK"),
-    ("Site", "na-east (OpenShift)"),
-    ("Created", "3 minutes ago",),
+    ("Site type", "OpenShift"),
+    ("Linked", "2 days ago",),
 )
 
-link_properties = html_table(props, class_="properties")
+site_properties = html_table(props, class_="properties")
+
+headings = "Name", "Replicas", "Bindings", "Actions"
+
+data = (
+    ("frontend", 3, "<a href=\"/networks/company-co/services/frontend/bindings/frontend-2da6/index.html\">frontend-2da6</a>", "<a class=\"table-button\" href=\"\">Add binding</a>"),
+    ("reviews", 2, "-", "<a class=\"table-button\" href=\"\">Add binding</a>"),
+    ("orders", 2, "-", "<a class=\"table-button\" href=\"\">Add binding</a>"),
+)
+
+deployment_table = html_table(data, headings=headings)
 
 def cell(column_index, value):
     if column_index == 0:
@@ -88,14 +97,14 @@ def cell(column_index, value):
 
     return f"<td>{value}</td>"
 
-headings = "Name", "Status", "Bindings", "Created"
+headings = "Name", "Status", "Bindings", "Created", "Actions"
 
 data = (
-    ("frontend", "OK", 2, "3 minutes ago"),
-    ("inventory", "OK", 1, "4 hours ago"),
-    ("orders", "OK", 1, "2 days ago"),
-    ("postgres", "OK", 1, "3/15/2020"),
-    ("reviews", "Error", 1, "3/15/2020"),
+    ("frontend", "OK", 2, "3 minutes ago", "<a class=\"table-button\" href=\"\">Delete</a>"),
+    ("inventory", "OK", 1, "4 hours ago", "<a class=\"table-button\" href=\"\">Delete</a>"),
+    ("orders", "OK", 1, "2 days ago", "<a class=\"table-button\" href=\"\">Delete</a>"),
+    ("database", "OK", 1, "3/15/2020", "<a class=\"table-button\" href=\"\">Delete</a>"),
+    ("reviews", "Error: No bindings", 0, "3/15/2020", "<a class=\"table-button\" href=\"\">Delete</a>"),
 )
 
 service_table = html_table(data, headings=headings, cell_fn=cell)
@@ -114,11 +123,11 @@ def cell(column_index, value):
 
     return f"<td>{value}</td>"
 
-headings = "Name", "Status", "Target", "Site", "Created"
+headings = "Name", "Status", "Target", "Site", "Created", "Actions"
 
 data = (
-    ("frontend-2da6", "OK", "deployment/frontend", "na-east (OpenShift)", "2 days ago"),
-    ("frontend-45cc", "Error", "container/frontend", "na-west (Podman)", "1 day ago"),
+    ("frontend-2da6", "OK", "deployment/frontend", "na-east (OpenShift)", "2 days ago", "<a class=\"table-button\" href=\"\">Delete</a>"),
+    ("frontend-45cc", "Error: Unreachable", "container/frontend", "na-west (Podman)", "1 day ago", "<a class=\"table-button\" href=\"\">Delete</a>"),
 )
 
 binding_table = html_table(data, headings=headings, cell_fn=cell)

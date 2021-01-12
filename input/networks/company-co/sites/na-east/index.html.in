@@ -1,19 +1,19 @@
 ---
-title: Service <span class="name">frontend</span>
+title: Linked site <span class="name">na-east</span>
 ---
 
 <div class="title-bar">
   <h1>{{page.title}}</h1>
   <nav>
     <a href="" class="small-button">Edit properties</a>
-    <a href="" class="small-button">Delete</a>
+    <a href="" class="small-button">Unlink</a>
   </nav>
 </div>
 
-{{service_properties}}
+{{site_properties}}
 
 <div class="section-bar">
-  <h2>Bindings</h2>
+  <h2>Deployments</h2>
 </div>
 
-{{binding_table}}
+{{deployment_table}}

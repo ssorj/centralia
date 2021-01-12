@@ -2,7 +2,7 @@
 title: Network <span class="name">company-co</span>
 ---
 
-<div class="title-bar">
+<div class="title-bar title-bar-tabs">
   <h1>{{page.title}}</h1>
   <nav>
     <a href="" class="small-button">Go to the network console</a>
@@ -15,7 +15,7 @@ title: Network <span class="name">company-co</span>
     <a href="#overview">Overview</a>
     <a href="#details">Details</a>
     <a href="#tokens">Link tokens</a>
-    <a href="#links">Links</a>
+    <a href="#sites">Linked sites</a>
     <a href="#services">Services</a>
   </nav>
   <div id="overview">
@@ -63,7 +63,7 @@ $ skupper link create <i>&lt;link-token-file&gt;</i></code></pre>
     <pre><a href="">http://frontend:8080/</a>
 <a href="">http://inventory:8080/</a>
 <a href="">http://orders:8080/</a>
-<a href="">jdbc://postgres:5432/</a>
+<a href="">jdbc://database:5432/</a>
 <a href="">http://reviews:8080/</a></pre>
   </div>
   <div id="details">
@@ -86,12 +86,12 @@ $ skupper link create <i>&lt;link-token-file&gt;</i></code></pre>
 
     {{token_table}}
   </div>
-  <div id="links">
+  <div id="sites">
     <div class="section-bar-top">
-      <h2>Links</h2>
+      <h2>Linked sites</h2>
     </div>
 
-    {{link_table}}
+    {{site_table}}
   </div>
   <div id="services">
     <div class="section-bar-top">
