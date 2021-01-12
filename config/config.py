@@ -1,7 +1,7 @@
 site_url = ""
 
 def path_nav(page):
-    separator = "<span class=\"path-separator\">›</span>"
+    separator = "<span class=\"path-separator\">&#8250;</span>"
     links = separator.join(list(page.path_nav_links)[1:])
 
     return f"<nav class=\"path-nav\">{links}</nav>"

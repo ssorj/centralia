@@ -14,7 +14,7 @@ title: Network <span class="name">company-co</span>
   <nav>
     <a href="#overview">Overview</a>
     <a href="#details">Details</a>
-    <a href="#tokens">Tokens</a>
+    <a href="#tokens">Link tokens</a>
     <a href="#links">Links</a>
     <a href="#services">Services</a>
   </nav>
@@ -36,7 +36,7 @@ title: Network <span class="name">company-co</span>
         <p>{{lipsum(10)}}</p>
 
         <nav>
-          <a href="" class="small-button">Download a single-use token</a>
+          <a href="" class="small-button">Download a single-use link token</a>
         </nav>
 
         <p></p>
@@ -46,7 +46,7 @@ title: Network <span class="name">company-co</span>
         <p>{{lipsum(15)}}</p>
 
         <pre><code>$ skupper init
-$ skupper link create <i>&lt;token-file&gt;</i></code></pre>
+$ skupper link create <i>&lt;link-token-file&gt;</i></code></pre>
       </li>
     </ol>
 
@@ -68,7 +68,7 @@ $ skupper link create <i>&lt;token-file&gt;</i></code></pre>
   </div>
   <div id="details">
     <div class="section-bar-top">
-      <h2>Details</h2>
+      <h2>Properties</h2>
       <nav>
         <a href="" class="small-button">Edit properties</a>
       </nav>
@@ -78,9 +78,9 @@ $ skupper link create <i>&lt;token-file&gt;</i></code></pre>
   </div>
   <div id="tokens">
     <div class="section-bar-top">
-      <h2>Tokens</h2>
+      <h2>Link tokens</h2>
       <nav>
-        <a href="" class="small-button">Create token</a>
+        <a href="" class="small-button">Create a link token</a>
       </nav>
     </div>
 
@@ -97,7 +97,7 @@ $ skupper link create <i>&lt;token-file&gt;</i></code></pre>
     <div class="section-bar-top">
       <h2>Services</h2>
       <nav>
-        <a href="" class="small-button">Create service</a>
+        <a href="" class="small-button">Create a service</a>
       </nav>
     </div>
 
