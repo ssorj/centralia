@@ -5,7 +5,7 @@ title: Network <span class="name">company-co</span>
 <div class="title-bar">
   <h1>{{page.title}}</h1>
   <nav>
-    <a href="" class="small-button">Go to console</a>
+    <a href="" class="small-button">Go to the network console</a>
     <a href="" class="small-button">Delete</a>
   </nav>
 </div>
@@ -54,7 +54,7 @@ $ skupper link create <i>&lt;token-file&gt;</i></code></pre>
 
     {{lipsum(15)}}
 
-    <pre><code>$ skupper expose deployment &lt;deployment-name&gt;</code></pre>
+    <pre><code>$ skupper expose deployment/&lt;deployment-name&gt;</code></pre>
 
     <h2>Connecting to services on this network</h2>
 
