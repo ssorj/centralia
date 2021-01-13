@@ -53,19 +53,15 @@ $ skupper link create <i>&lt;link-token-file&gt;</i></code></pre>
 
     <h2>Exposing services on this network</h2>
 
-    {{lipsum(15)}}
+    <p>{{lipsum(15)}}</p>
 
     <pre><code>$ skupper expose deployment/<i>&lt;deployment-name&gt;</i></code></pre>
 
     <h2>Connecting to services on this network</h2>
 
-    {{lipsum(15)}}
+    <p>{{lipsum(15)}}</p>
 
-    <pre><a href="">http://frontend:8080/</a>
-<a href="">http://inventory:8080/</a>
-<a href="">http://orders:8080/</a>
-<a href="">jdbc://database:5432/</a>
-<a href="">http://reviews:8080/</a></pre>
+    {{connection_url_table}}
   </div>
   <div id="details">
     <div class="section-bar-top">
