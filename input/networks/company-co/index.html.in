@@ -5,19 +5,20 @@ title: Network <span class="name">company-co</span>
 <div class="title-bar title-bar-tabs">
   <h1>{{page.title}}</h1>
   <nav>
-    <a href="" class="small-button">Go to the network console</a>
-    <a href="" class="small-button">Delete</a>
+    <a href="" class="small-button">Console <span class="material-icons-outlined small">open_in_new</span></a>
+    <a href="" class="small-button"><span class="material-icons-outlined">more_horiz</span></a>
   </nav>
 </div>
 
 <div class="tabs">
   <nav>
-    <a href="#overview">Overview</a>
-    <a href="#details">Details</a>
-    <a href="#tokens">Link tokens</a>
-    <a href="#sites">Linked sites</a>
-    <a href="#services">Services</a>
+    <a href="?tab=overview">Overview</a>
+    <a href="?tab=details">Details</a>
+    <a href="?tab=tokens">Link tokens</a>
+    <a href="?tab=sites">Linked sites</a>
+    <a href="?tab=services">Services</a>
   </nav>
+
   <div id="overview">
     <h2>Linking sites to this network</h2>
 

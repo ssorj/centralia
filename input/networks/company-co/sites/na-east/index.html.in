@@ -5,8 +5,8 @@ title: Linked site <span class="name">na-east</span>
 <div class="title-bar">
   <h1>{{page.title}}</h1>
   <nav>
-    <a href="" class="small-button">Edit properties</a>
     <a href="" class="small-button">Unlink</a>
+    <a href="" class="small-button">Edit properties</a>
   </nav>
 </div>
 

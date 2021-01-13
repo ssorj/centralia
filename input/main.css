@@ -525,14 +525,19 @@ b {
 
 /* --- */
 
-.path-nav > a {
+nav.path-nav > a {
     font-weight: 300;
     color: black;
 }
 
-.path-separator {
+nav.path-nav > span.path-separator {
     margin-left: 0.6em;
     margin-right: 0.6em;
+}
+
+#-path-nav {
+    border-bottom: inherit;
+    margin-bottom: -1em;
 }
 
 #-path-nav > div {
@@ -543,7 +548,10 @@ b {
 
 span.material-icons-outlined {
     vertical-align: -0.2em;
-    margin-right: 0.1em;
+}
+
+span.material-icons-outlined.small {
+    font-size: 1.1em;
 }
 
 /* --- */
@@ -600,3 +608,5 @@ a.table-button {
     font-weight: 400;
     font-size: 0.85em;
 }
+
+/* --- */
