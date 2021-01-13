@@ -25,6 +25,8 @@ app.set_default_command("serve", force=True)
 def publish(app, verbose=False):
     """Publish site output"""
 
+    ENV["TRANSOM_PUBLISH"] = "1"
+
     with project_env():
         args = ["render", site.config_dir, site.input_dir, "docs", "--force"]
 

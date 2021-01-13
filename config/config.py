@@ -1,4 +1,9 @@
-site_url = "/centralia"
+import os
+
+if "TRANSOM_PUBLISH" in os.environ:
+    site_url = "/centralia"
+else:
+    site_url = ""
 
 def path_nav(page):
     separator = "<span class=\"path-separator\">&#8250;</span>"
@@ -176,6 +181,20 @@ data = (
 )
 
 binding_table = html_table(data, headings=headings, cell_fn=cell)
+
+def cell(column_index, value):
+    if column_index == 5:
+        value = table_button("Delete")
+
+    return f"<td>{value}</td>"
+
+headings = "Name", "Status", "Host", "Port", "Created", "Actions"
+
+data = (
+    ("frontend-9d41", "OK", "www.companyco.com", 80, "2 days ago", None),
+)
+
+route_table = html_table(data, headings=headings, cell_fn=cell)
 
 props = (
     ("Name", "frontend-2da6"),

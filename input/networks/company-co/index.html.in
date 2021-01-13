@@ -64,7 +64,7 @@ $ skupper link create <i>&lt;link-token-file&gt;</i></code></pre>
     {{connection_url_table}}
   </div>
   <div id="details">
-    <div class="section-bar-top">
+    <div class="section-bar">
       <h2>Properties</h2>
       <nav>
         <a href="" class="small-button">Edit properties</a>
@@ -74,7 +74,7 @@ $ skupper link create <i>&lt;link-token-file&gt;</i></code></pre>
     {{network_properties}}
   </div>
   <div id="tokens">
-    <div class="section-bar-top">
+    <div class="section-bar">
       <h2>Link tokens</h2>
       <nav>
         <a href="" class="small-button">Create a link token</a>
@@ -84,14 +84,14 @@ $ skupper link create <i>&lt;link-token-file&gt;</i></code></pre>
     {{token_table}}
   </div>
   <div id="sites">
-    <div class="section-bar-top">
+    <div class="section-bar">
       <h2>Linked sites</h2>
     </div>
 
     {{site_table}}
   </div>
   <div id="services">
-    <div class="section-bar-top">
+    <div class="section-bar">
       <h2>Services</h2>
       <nav>
         <a href="" class="small-button">Create a service</a>

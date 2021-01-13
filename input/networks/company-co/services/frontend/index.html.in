@@ -20,3 +20,12 @@ title: Service <span class="name">frontend</span>
 </div>
 
 {{binding_table}}
+
+<div class="section-bar">
+  <h2>Public routes</h2>
+  <nav>
+    <a href="" class="small-button">Create a public route</a>
+  </nav>
+</div>
+
+{{route_table}}

@@ -436,28 +436,20 @@ section > div {
 
 /* --- */
 
-.section-bar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .section-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3em;
-    margin-top: 1.6em;
-    border-top: 1px solid #999;
-    padding-top: 1em;
+    /* height: 3em; */
+    /* margin-top: 1.6em; */
+    /* border-top: 1px solid #999; */
+    /* padding-top: 1em; */
 }
 
-.section-bar-top > *,
 .section-bar > * {
     margin: 0;
 }
 
-.section-bar-top > nav > a,
 .section-bar > nav > a {
     margin-left: 1em;
 }
