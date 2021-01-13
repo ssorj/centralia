@@ -356,6 +356,10 @@ header a {
     color: black;
 }
 
+footer > div {
+    padding-top: 2em;
+}
+
 #-logotype {
     font-weight: 700;
 }

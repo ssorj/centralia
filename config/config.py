@@ -1,4 +1,4 @@
-site_url = ""
+site_url = "/centralia"
 
 def path_nav(page):
     separator = "<span class=\"path-separator\">&#8250;</span>"
