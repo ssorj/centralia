@@ -1,0 +1,54 @@
+---
+title: Site <span class="name">na-east</span>
+---
+
+<div class="title-bar title-bar-tabs">
+  <h1>{{page.title}}</h1>
+  <nav>
+    <a href="" class="small-button"><span class="material-icons-outlined">more_horiz</span></a>
+  </nav>
+</div>
+
+<div class="tabs">
+  <nav>
+    <a href="?tab=overview">Overview</a>
+    <a href="?tab=details">Details</a>
+    <a href="?tab=services">Services</a>
+  </nav>
+
+  <div id="overview">
+    <h2>Linking this site to a network</h2>
+
+    <ol>
+      <li>
+        <p>{{lipsum(20)}}</p>
+
+        <nav>
+          <a href="" class="small-button">Upload a link token</a>
+        </nav>
+
+        <p></p>
+      </li>
+
+      <li>
+        <p>{{lipsum(10)}}</p>
+
+        <nav>
+          <a href="" class="small-button">Link this site</a>
+        </nav>
+
+        <p></p>
+      </li>
+    </ol>
+  </div>
+
+  <div id="details">
+  </div>
+
+  <div id="services">
+    <h2>Connecting to services on this network</h2>
+
+    <p>{{lipsum(15)}}</p>
+
+    {{connection_url_table}}
+  </div>
