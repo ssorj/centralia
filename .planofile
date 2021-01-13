@@ -20,3 +20,21 @@
 from transom_commands import *
 
 app.set_default_command("serve", force=True)
+
+_force_arg = CommandArgument("force", help="Render all input files, including unmodified ones")
+_verbose_arg = CommandArgument("verbose", help="Print detailed logging to the console")
+
+@command(args=(_force_arg, _verbose_arg))
+def publish(app, force=False, verbose=False):
+    """Publish site output"""
+
+    with project_env():
+        args = ["render", site.config_dir, site.input_dir, "docs"]
+
+        if force:
+            args.append("--force")
+
+        if verbose:
+            args.append("--verbose")
+
+        TransomCommand().main(args)
