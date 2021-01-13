@@ -14,7 +14,7 @@ def table_button(content, href=""):
 
 def cell(column_index, value):
     if column_index == 0:
-        value = table_link(value, href="/networks/company-co/index.html")
+        value = table_link(value, href="company-co/index.html")
     elif column_index == 4:
         value = table_button("Console <span class=\"material-icons-outlined small\">open_in_new</span>")
 
@@ -41,7 +41,7 @@ network_properties = html_table(props, class_="properties")
 
 def cell(column_index, value):
     if column_index == 0:
-        value = table_link(value, href="/networks/company-co/tokens/company-co-497c/index.html")
+        value = table_link(value, href="tokens/company-co-497c/index.html")
     elif column_index == 6:
         value = " ".join((table_button("Download"), table_button("Revoke")))
 
@@ -70,7 +70,7 @@ token_properties = html_table(props, class_="properties")
 
 def cell(column_index, value):
     if column_index == 0:
-        value = table_link(value, href="/networks/company-co/sites/na-east/index.html")
+        value = table_link(value, href="sites/na-east/index.html")
     elif column_index == 5:
         value = table_button("Unlink")
 
@@ -108,7 +108,7 @@ def cell(column_index, value):
 headings = "Name", "Replicas", "Bindings", "Actions"
 
 data = (
-    ("frontend", 3, table_link("frontend-2da6", href="/networks/company-co/services/frontend/bindings/frontend-2da6/index.html"), None),
+    ("frontend", 3, table_link("frontend-2da6", href=f"{site_url}/networks/company-co/services/frontend/bindings/frontend-2da6/index.html"), None),
     ("reviews", 2, "-", None),
     ("orders", 2, "-", None),
 )
@@ -117,7 +117,7 @@ deployment_table = html_table(data, headings=headings, cell_fn=cell)
 
 def cell(column_index, value):
     if column_index == 0:
-        value = table_link(value, href="/networks/company-co/services/frontend/index.html")
+        value = table_link(value, href="services/frontend/index.html")
     elif column_index == 4:
         value = table_button("Delete")
 
@@ -145,7 +145,7 @@ service_properties = html_table(props, class_="properties")
 
 def cell(column_index, value):
     if column_index == 0:
-        value = table_link(value, href="/networks/company-co/services/frontend/bindings/frontend-2da6/index.html")
+        value = table_link(value, href="bindings/frontend-2da6/index.html")
     elif column_index == 5:
         value = table_button("Delete")
 
@@ -164,7 +164,7 @@ props = (
     ("Name", "frontend-2da6"),
     ("Status", "OK"),
     ("Target", "deployment/frontend"),
-    ("Site", table_link("na-east (OpenShift)", href="/networks/company-co/sites/na-east/index.html")),
+    ("Site", table_link("na-east (OpenShift)", href=f"{site_url}/networks/company-co/sites/na-east/index.html")),
     ("Created", "2 days ago",),
 )
 
