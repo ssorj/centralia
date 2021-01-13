@@ -1,9 +1,6 @@
 import os
 
-if "TRANSOM_PUBLISH" in os.environ:
-    site_url = "/centralia"
-else:
-    site_url = ""
+site_url = os.environ.get("SITE_URL", "")
 
 def path_nav(page):
     separator = "<span class=\"path-separator\">&#8250;</span>"
